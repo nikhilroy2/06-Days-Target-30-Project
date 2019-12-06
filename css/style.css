@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+    
+}
+:root{
+    font-size: 100%;
+    font-family: sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #53a;
+}
+.wrapper{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+.wrapper h1{
+    font-size: 6rem;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    color: cyan;
+    text-align: center;
+    animation: comming 3s cubic-bezier(1, 0, 0, 1) infinite alternate;
+}
+@keyframes comming {
+    0%{
+        transform: translateY(-50px);
+        opacity: .1;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.wrapper h3 {
+    color: cyan;
+    display: inline-block;
+    position: relative;
+    font-size: 5rem;
+    padding: 4px 12px;
+    border-radius: 4px/6px;
+    animation: 3s linear infinite countCome alternate;
+    background: rgba(0, 255, 255,.5);
+}
+@keyframes countCome {
+    0%{
+        box-shadow: 10px 10px 100px 1px;
+
+    }
+    30%{
+        box-shadow: 20px 0px 100px 1px;
+
+    }
+    60%{
+        box-shadow: 0px 20px 100px 1px;
+
+    }
+    80%{
+        box-shadow: -20px 0px 100px 1px;
+
+    }
+    100%{
+        box-shadow: -20px -20px 100px 1px;
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    :root{
+        font-size: 80%;
+    }
+}
+@media screen and (max-width: 800px) {
+    :root{
+        font-size: 60%;
+    }
+}
+@media screen and (max-width: 600px) {
+    :root{
+        font-size: 40%;
+    }
+}
+
+
+/*.................About Me............*/
+.nl_wrapper{
+    position: fixed;
+    bottom: 0px;
+    left: 10%;
+    overflow: hidden;
+}
+.nl_wrapper button{
+    display: inline-block;
+    background: cyan;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    padding: 8px 12px;
+    margin-left: 8px;
+    border-radius: 8px 8px 0px 0px;
+}
+.nl_wrapper .contact_social{
+    width: 180px;
+    height: 100px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    flex-flow: row wrap;
+    overflow: hidden;
+    transform: translateX(-100%);
+    transition: 1s;
+    opacity: 0;
+    border-radius: 10px;
+}
+.nl_wrapper .add_contact_wrapper{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.nl_wrapper .contact_social a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+}
+.nl_wrapper .contact_social h4{
+    flex: 100%;
+    margin: 0px;
+    padding: 0px;
+    line-height: 50px;
+    background: cyan;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+
+}
+.nl_wrapper .contact_social h4::before,
+.nl_wrapper .contact_social h4::after{
+    content: '';
+    position: absolute;
+    top: -25px;
+    width: 40px;
+    height:  40px;
+    border-radius: 50%;
+    z-index: -1;
+   
+}
+.nl_wrapper .contact_social h4::before{
+    border-left: 10px solid cyan;
+    border-bottom: 10px solid cyan;
+    left: -10px;
+}
+.nl_wrapper .contact_social h4::after{
+    border-right: 10px solid cyan;
+    border-bottom: 10px solid cyan;
+    right: -10px;
+}
+.nl_wrapper .contact_social a img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.project_30{
+    position: fixed;
+    bottom: 0px;
+    right: 0%;
+    text-align: center;
+    background: cyan;
+    padding: 4px 12px;
+}
